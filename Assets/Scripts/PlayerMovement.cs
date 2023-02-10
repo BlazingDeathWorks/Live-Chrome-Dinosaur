@@ -10,10 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private CircleCollider2D groundTrigger;
     private bool canJump, isJumping;
 
+    public GameObject button;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         groundTrigger = GetComponent<CircleCollider2D>();
+        button.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     private void Update()
@@ -37,5 +41,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground")) canJump = true;
+
+        if (collision.gameObject.CompareTag("Cactus"))
+        {
+            Time.timeScale = 0f;
+
+            button.SetActive(true);
+        }
     }
 }

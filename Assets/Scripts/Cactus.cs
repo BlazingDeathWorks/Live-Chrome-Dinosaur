@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class Cactus : MonoBehaviour
 {
+    public CactusSpawner spawner;
+
     public float speed = 1;
     private Rigidbody2D rb;
 
@@ -18,7 +20,7 @@ public class Cactus : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player died; Do end scene here");
+
         }
     }
 

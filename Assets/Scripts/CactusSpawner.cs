@@ -30,4 +30,5 @@ public class CactusSpawner : MonoBehaviour
     {
         currentSpawnRate = Random.Range(spawnRateMin, spawnRateMax);
     }
+
 }
