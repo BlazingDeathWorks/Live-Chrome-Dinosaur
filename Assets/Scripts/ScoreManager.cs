@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        score = (int)(Time.deltaTime * scoreFactor);
-        scoreText.text = score.ToString();
+        score += (int)(Time.deltaTime * scoreFactor);
+        scoreText.text = "Score: " + score.ToString();
     }
 }
