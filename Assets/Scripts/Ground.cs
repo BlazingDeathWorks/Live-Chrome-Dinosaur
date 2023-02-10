@@ -22,6 +22,9 @@ public class Ground : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        transform.position = new Vector3(ground.transform.position.x + offset, ground.transform.position.y, ground.transform.position.z);
+        if (collision.gameObject.tag == "Ground")
+        {
+            transform.position = new Vector3(ground.transform.position.x + offset, ground.transform.position.y, ground.transform.position.z);
+        }
     }
 }
