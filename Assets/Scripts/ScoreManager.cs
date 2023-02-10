@@ -7,11 +7,11 @@ public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
     public int scoreFactor = 10;
-    private int score;
+    private float score;
 
     private void Update()
     {
-        score += (int)(Time.deltaTime * scoreFactor);
-        scoreText.text = "Score: " + score.ToString();
+        score += Time.deltaTime * scoreFactor;
+        scoreText.text = "Score: " + (int)score;
     }
 }
