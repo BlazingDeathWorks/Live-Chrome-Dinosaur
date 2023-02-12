@@ -20,6 +20,5 @@ public class SceneController : MonoBehaviour
     public void SceneReset()
     {
         SceneManager.LoadScene(0);
-        Debug.Log("Reset");
     }
 }
