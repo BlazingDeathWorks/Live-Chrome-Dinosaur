@@ -36,13 +36,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) &! Input.GetKeyDown(KeyCode.Space))
         {
             hitbox.size = new Vector2(0.8f, 0.45f);
-            //hitbox.offset = new Vector2(0, -0.225f);
+            hitbox.offset = new Vector2(0, -0.225f);
             render.sprite = duckSprite;
         }
         else
         {
             hitbox.size = new Vector2(0.8f, 0.9f);
-            //hitbox.offset = Vector2.zero;
+            hitbox.offset = Vector2.zero;
             render.sprite = standSprite;
         }
     }
