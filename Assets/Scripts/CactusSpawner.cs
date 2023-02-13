@@ -30,7 +30,7 @@ public class CactusSpawner : MonoBehaviour
 
     private void GenerateSpawnRate()
     {
-        if (cactus == cactus1)
+        if (cactus = cactus1)
         {
             spawnRateMax = spawnRateMax1;
         }

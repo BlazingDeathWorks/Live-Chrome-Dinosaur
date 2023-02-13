@@ -596,8 +596,8 @@ MonoBehaviour:
   currentSpawnRate: 0
   spawnRateMin: 1
   spawnRateMax: 3
-  spawnRateMax1: 0
-  spawnRateMax2: 0
+  spawnRateMax1: 3
+  spawnRateMax2: 3
 --- !u!4 &850453921
 Transform:
   m_ObjectHideFlags: 0
