@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject button;
 
     private Rigidbody2D rb;
-    private BoxCollider2D hitbox;
     private bool canJump, isJumping;
+    private BoxCollider2D hitbox;
     private SpriteRenderer render;
     private bool isDead = false;
 
@@ -28,12 +28,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDead) return;
 
-        if (Input.GetKeyDown(KeyCode.Space) && canJump &!Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump & !Input.GetKey(KeyCode.LeftShift))
         {
             isJumping = true;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) &! Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftShift) & !Input.GetKeyDown(KeyCode.Space))
         {
             hitbox.size = new Vector2(0.8f, 0.45f);
             hitbox.offset = new Vector2(0, -0.225f);
